@@ -15,6 +15,8 @@
 		EBC8BD7526E18E490034C8E2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */; };
 		EBC8BD7826E191E10034C8E2 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7726E191E10034C8E2 /* UserListView.swift */; };
 		EBC8BD7B26E198010034C8E2 /* URLSession+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */; };
+		EBC8BD7D26E1A2940034C8E2 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7C26E1A2940034C8E2 /* PostViewModel.swift */; };
+		EBC8BD7F26E1A2B50034C8E2 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		EBC8BD7726E191E10034C8E2 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Map.swift"; sourceTree = "<group>"; };
+		EBC8BD7C26E1A2940034C8E2 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */,
+				EBC8BD7C26E1A2940034C8E2 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8BD7726E191E10034C8E2 /* UserListView.swift */,
+				EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC8BD6426E18A050034C8E2 /* ContentView.swift in Sources */,
+				EBC8BD7D26E1A2940034C8E2 /* PostViewModel.swift in Sources */,
+				EBC8BD7F26E1A2B50034C8E2 /* PostListView.swift in Sources */,
 				EBC8BD7B26E198010034C8E2 /* URLSession+Map.swift in Sources */,
 				EBC8BD7826E191E10034C8E2 /* UserListView.swift in Sources */,
 				EBC8BD7526E18E490034C8E2 /* UserViewModel.swift in Sources */,

@@ -20,15 +20,19 @@ struct UserListView: View {
                 }else {
                     List {
                         ForEach(viewModel.users) { user in
-                            VStack(alignment: .leading) {
-                                Text(user.name).font(.title2)
-                                Text(user.email).font(.subheadline)
+                            NavigationLink(destination: PostListView()) {
+                                VStack(alignment: .leading) {
+                                    Text(user.name).font(.title2)
+                                    Text(user.email).font(.subheadline)
+                                }
                             }
                         }
                     }
                 }
             }
             .navigationTitle("Usuários")
+            .environmentObject(PostViewModel())
+
         }
         .onAppear {
             viewModel.newFetchUsers()
