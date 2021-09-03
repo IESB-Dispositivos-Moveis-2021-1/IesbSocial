@@ -11,6 +11,10 @@
 		EBC8BD6426E18A050034C8E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD6326E18A050034C8E2 /* ContentView.swift */; };
 		EBC8BD6626E18A070034C8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC8BD6526E18A070034C8E2 /* Assets.xcassets */; };
 		EBC8BD6926E18A070034C8E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC8BD6826E18A070034C8E2 /* Preview Assets.xcassets */; };
+		EBC8BD7226E18A970034C8E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7126E18A970034C8E2 /* User.swift */; };
+		EBC8BD7526E18E490034C8E2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */; };
+		EBC8BD7826E191E10034C8E2 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7726E191E10034C8E2 /* UserListView.swift */; };
+		EBC8BD7B26E198010034C8E2 /* URLSession+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		EBC8BD6526E18A070034C8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBC8BD6826E18A070034C8E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBC8BD6A26E18A070034C8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC8BD7126E18A970034C8E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EBC8BD7726E191E10034C8E2 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Map.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,10 @@
 		EBC8BD6026E18A050034C8E2 /* IesbSocial */ = {
 			isa = PBXGroup;
 			children = (
+				EBC8BD7926E197DD0034C8E2 /* Util */,
+				EBC8BD7626E191C40034C8E2 /* View */,
+				EBC8BD7326E18E3A0034C8E2 /* ViewModel */,
+				EBC8BD7026E18A7B0034C8E2 /* Model */,
 				EBC8BD6126E18A050034C8E2 /* IesbSocialApp.swift */,
 				EBC8BD6326E18A050034C8E2 /* ContentView.swift */,
 				EBC8BD6526E18A070034C8E2 /* Assets.xcassets */,
@@ -67,6 +79,38 @@
 				EBC8BD6826E18A070034C8E2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBC8BD7026E18A7B0034C8E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBC8BD7126E18A970034C8E2 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBC8BD7326E18E3A0034C8E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EBC8BD7626E191C40034C8E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBC8BD7726E191E10034C8E2 /* UserListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EBC8BD7926E197DD0034C8E2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC8BD6426E18A050034C8E2 /* ContentView.swift in Sources */,
+				EBC8BD7B26E198010034C8E2 /* URLSession+Map.swift in Sources */,
+				EBC8BD7826E191E10034C8E2 /* UserListView.swift in Sources */,
+				EBC8BD7526E18E490034C8E2 /* UserViewModel.swift in Sources */,
 				EBC8BD6226E18A050034C8E2 /* IesbSocialApp.swift in Sources */,
+				EBC8BD7226E18A970034C8E2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

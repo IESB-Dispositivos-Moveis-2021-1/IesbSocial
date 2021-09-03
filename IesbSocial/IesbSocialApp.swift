@@ -11,7 +11,7 @@ import SwiftUI
 struct IesbSocialApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UserListView(viewModel: UserViewModel())
         }
     }
 }
