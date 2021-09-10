@@ -12,13 +12,27 @@ struct PostListView: View {
     @EnvironmentObject
     var viewModel: PostViewModel
     
+    var user: User
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if viewModel.loading {
+                LoadingView()
+            }else {
+                List {
+                    ForEach(viewModel.posts) { post in
+                        VStack(alignment: .leading) {
+                            Text(post.title).font(.title)
+                            Text(post.body).font(.body)
+                        }
+                    }
+                }
+            }
+        }
+        .navigationTitle(user.name)
+        .onAppear {
+            viewModel.fetchPosts(for: user)
+        }
     }
 }
 
-struct PostListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostListView()
-    }
-}

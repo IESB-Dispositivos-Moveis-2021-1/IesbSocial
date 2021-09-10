@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB7F493F26EA9A42008B1CCB /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7F493E26EA9A42008B1CCB /* NewUserView.swift */; };
+		EB7F494126EAE975008B1CCB /* ViaCep.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7F494026EAE975008B1CCB /* ViaCep.swift */; };
+		EB7F494326EAE9A5008B1CCB /* ViaCepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7F494226EAE9A5008B1CCB /* ViaCepViewModel.swift */; };
 		EBC8BD6226E18A050034C8E2 /* IesbSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD6126E18A050034C8E2 /* IesbSocialApp.swift */; };
 		EBC8BD6426E18A050034C8E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD6326E18A050034C8E2 /* ContentView.swift */; };
 		EBC8BD6626E18A070034C8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC8BD6526E18A070034C8E2 /* Assets.xcassets */; };
@@ -17,9 +20,15 @@
 		EBC8BD7B26E198010034C8E2 /* URLSession+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */; };
 		EBC8BD7D26E1A2940034C8E2 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7C26E1A2940034C8E2 /* PostViewModel.swift */; };
 		EBC8BD7F26E1A2B50034C8E2 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */; };
+		EBC8BD8126E1A7180034C8E2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD8026E1A7180034C8E2 /* Post.swift */; };
+		EBC8BD8326E1A7DF0034C8E2 /* ObservableObject+Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD8226E1A7DF0034C8E2 /* ObservableObject+Sink.swift */; };
+		EBC8BD8526E1AA890034C8E2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD8426E1AA890034C8E2 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB7F493E26EA9A42008B1CCB /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
+		EB7F494026EAE975008B1CCB /* ViaCep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaCep.swift; sourceTree = "<group>"; };
+		EB7F494226EAE9A5008B1CCB /* ViaCepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaCepViewModel.swift; sourceTree = "<group>"; };
 		EBC8BD5E26E18A050034C8E2 /* IesbSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IesbSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC8BD6126E18A050034C8E2 /* IesbSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IesbSocialApp.swift; sourceTree = "<group>"; };
 		EBC8BD6326E18A050034C8E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +41,9 @@
 		EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Map.swift"; sourceTree = "<group>"; };
 		EBC8BD7C26E1A2940034C8E2 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		EBC8BD8026E1A7180034C8E2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EBC8BD8226E1A7DF0034C8E2 /* ObservableObject+Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableObject+Sink.swift"; sourceTree = "<group>"; };
+		EBC8BD8426E1AA890034C8E2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				EBC8BD7126E18A970034C8E2 /* User.swift */,
+				EBC8BD8026E1A7180034C8E2 /* Post.swift */,
+				EB7F494026EAE975008B1CCB /* ViaCep.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +112,7 @@
 			children = (
 				EBC8BD7426E18E490034C8E2 /* UserViewModel.swift */,
 				EBC8BD7C26E1A2940034C8E2 /* PostViewModel.swift */,
+				EB7F494226EAE9A5008B1CCB /* ViaCepViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,6 +122,8 @@
 			children = (
 				EBC8BD7726E191E10034C8E2 /* UserListView.swift */,
 				EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */,
+				EBC8BD8426E1AA890034C8E2 /* LoadingView.swift */,
+				EB7F493E26EA9A42008B1CCB /* NewUserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */,
+				EBC8BD8226E1A7DF0034C8E2 /* ObservableObject+Sink.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -188,12 +206,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7F494126EAE975008B1CCB /* ViaCep.swift in Sources */,
+				EB7F494326EAE9A5008B1CCB /* ViaCepViewModel.swift in Sources */,
+				EBC8BD8326E1A7DF0034C8E2 /* ObservableObject+Sink.swift in Sources */,
 				EBC8BD6426E18A050034C8E2 /* ContentView.swift in Sources */,
 				EBC8BD7D26E1A2940034C8E2 /* PostViewModel.swift in Sources */,
+				EBC8BD8526E1AA890034C8E2 /* LoadingView.swift in Sources */,
 				EBC8BD7F26E1A2B50034C8E2 /* PostListView.swift in Sources */,
 				EBC8BD7B26E198010034C8E2 /* URLSession+Map.swift in Sources */,
 				EBC8BD7826E191E10034C8E2 /* UserListView.swift in Sources */,
+				EB7F493F26EA9A42008B1CCB /* NewUserView.swift in Sources */,
 				EBC8BD7526E18E490034C8E2 /* UserViewModel.swift in Sources */,
+				EBC8BD8126E1A7180034C8E2 /* Post.swift in Sources */,
 				EBC8BD6226E18A050034C8E2 /* IesbSocialApp.swift in Sources */,
 				EBC8BD7226E18A970034C8E2 /* User.swift in Sources */,
 			);

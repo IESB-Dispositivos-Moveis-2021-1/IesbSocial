@@ -24,9 +24,11 @@ class UserViewModel: ObservableObject {
     }
     
     private var userCancellationToken: AnyCancellable?
+    private var createUserCancellationToken: AnyCancellable?
     
     
-    func newFetchUsers() {
+    func fetchUsers() {
+        userCancellationToken?.cancel()
         if let url = URL(string: "\(kBaseURL)/users") {
             let session = URLSession.shared
             let request = URLRequest(url: url)
@@ -38,41 +40,27 @@ class UserViewModel: ObservableObject {
                 .decode(type: [User].self, decoder: JSONDecoder())
                 .breakpointOnError()
                 .receive(on: DispatchQueue.main)
-                .sink(receiveCompletion: sinkError(_:)) { self.users = $0 }
-
-            
-            
+                .sink(receiveCompletion: { self.sinkError($0) { self.loading = false }}) { self.users = $0 }
         }
     }
     
-    private func sinkError(_ completion: Subscribers.Completion<Error>) {
-        switch completion {
-            case .failure(let error):
-                loading = false
-                debugPrint(error)
-            default:
-                break
-        }
-    }
-    
-    func fetchUsers() {
-        // GCD = Grand Central Dispatch
-        
-        let session = URLSession.shared
-        
+    func save(_ user: User) {
         if let url = URL(string: "\(kBaseURL)/users") {
-            session.dataTask(with: url) { (data, response, error) in
-                if let resp = response as? HTTPURLResponse,
-                   resp.statusCode >= 200, resp.statusCode < 300,
-                   let json = data {
-                    DispatchQueue.main.async {
-                        self.users = try! JSONDecoder().decode([User].self, from: json)
-                    }
+            let session = URLSession.shared
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            let body = try! JSONEncoder().encode(user)
+            
+            loading = true
+            
+            let task = session.uploadTask(with: request, from: body) { [unowned self] data, response, error in
+                DispatchQueue.main.async { [unowned self] in
+                    self.loading = false
                 }
-            }.resume()
+            }
+            task.resume()
         }
-        
     }
-    
     
 }

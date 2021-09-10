@@ -12,15 +12,22 @@ struct UserListView: View {
     @ObservedObject
     var viewModel: UserViewModel
     
+    @StateObject
+    var postViewModel = PostViewModel()
+    
+    
+    @State
+    private var showNewUserForm = false
+    
     var body: some View {
         NavigationView {
             Group {
                 if viewModel.loading {
-                    loading()
+                    LoadingView()
                 }else {
                     List {
                         ForEach(viewModel.users) { user in
-                            NavigationLink(destination: PostListView()) {
+                            NavigationLink(destination: PostListView(user: user)) {
                                 VStack(alignment: .leading) {
                                     Text(user.name).font(.title2)
                                     Text(user.email).font(.subheadline)
@@ -28,23 +35,24 @@ struct UserListView: View {
                             }
                         }
                     }
+                    
                 }
             }
             .navigationTitle("Usuários")
-            .environmentObject(PostViewModel())
-
+            .navigationBarItems(
+                trailing: Button("\(Image(systemName: "plus"))") {
+                    showNewUserForm.toggle()
+                }.font(Font.title.weight(.light))
+            )
         }
+        .environmentObject(postViewModel)
         .onAppear {
-            viewModel.newFetchUsers()
-            
+            viewModel.fetchUsers()
+        }
+        .sheet(isPresented: $showNewUserForm) {
+            NewUserView(viaCepViewModel: ViaCepViewModel())
+                .environmentObject(viewModel)
         }
     }
     
-    @ViewBuilder
-    private func loading() -> some View {
-        VStack {
-            ProgressView()
-            Text("Aguarde... carregando...")
-        }
-    }
 }
